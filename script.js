@@ -19,31 +19,153 @@ const charactersMovie =
      {
         name: "Aragorn",
         race: "human",
-        age: 87,
         isDead: false,
         ring: "Barahir",
     },
     {
         name: "Frodo Baggins",
         race: "hobbit",
-        age: 33,
         isDead: false,
         ring: "The One",
     },
     {
       name: "Gandalf",
       race: "maiar",
-      age: 9000,
       isDead: false,
       ring: "Narya",
-  },
+    },
     {
       name: "Boromir",
       race: "human",
-      age: 41,
       isDead: true,
       ring: null,
-  },
+    },
+    {
+      name: "Meriadoc Brandybuck",
+      race: "hobbit",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+     name: "Peregrin Took",
+      race: "hobbit",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Samwise Gamegee",
+      race: "hobbit",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Arwen",
+      race: "elve",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Legolas",
+      race: "elve",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Denethor",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Elrond",
+      race: "elve",
+      isDead: false,
+      ring: "Vilya",
+    },
+    {
+      name: "Eomer",
+      race: "human",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Eowyn",
+      race: "human",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Faramir",
+      race: "human",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Galadriel",
+      race: "elve",
+      isDead: false,
+      ring: "Nenya",
+    },
+    {
+      name: "Gimli",
+      race: "dwarf",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Grima Wormtongue",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Gollum",
+      race: "hobbit",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Isildur",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Saruman",
+      race: "maiar",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Theoden",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Grishnákh",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Uglúk",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Gothmog",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Mog",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
 ],
 };
 
@@ -61,11 +183,10 @@ yearProduction.textContent = year;
 directorMovie.textContent = directorName;
 
 const setCharactersCards = (arr = characters) =>{
-charactersCards.innerHTML += arr.map(({name, race, age, isDead, ring}) =>
+charactersCards.innerHTML += arr.map(({name, race, isDead, ring}) =>
     `<div class="character-card">
         <h2>${name} ${isDead ? "(Dead)" : ""}</h2>
         <p>Race: ${race}</p>
-        <p>Age: ${age}</p>
         <p>Ring: ${ring ? ring : "No ring"}</p>
     </div>`
 ).join("");
