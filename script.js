@@ -18,28 +18,28 @@ const charactersMovie =
     characters : [
      {
         name: "Aragorn",
-        race: "Human",
+        race: "human",
         age: 87,
         isDead: false,
         ring: "Barahir",
     },
     {
         name: "Frodo Baggins",
-        race: "Hobbit",
+        race: "hobbit",
         age: 33,
         isDead: false,
         ring: "The One",
     },
     {
       name: "Gandalf",
-      race: "Maiar",
+      race: "maiar",
       age: 9000,
       isDead: false,
       ring: "Narya",
   },
     {
       name: "Boromir",
-      race: "Human",
+      race: "human",
       age: 41,
       isDead: true,
       ring: null,
@@ -77,20 +77,23 @@ charactersDropdownList.addEventListener("change", (e) =>{
         case "dead" :
           setCharactersCards(characters.filter( (character) => character.isDead !== false));
         break;
-        case "dwarfs" :
+        case "dwarf" :
           setCharactersCards(characters.filter( (character) => character.race === "dwarf"));
         break;
-        case "hobbits" :
+        case "hobbit" :
           setCharactersCards(characters.filter( (character) => character.race === "hobbit"));
         break;
-        case "elves" :
+        case "elve" :
           setCharactersCards(characters.filter( (character) => character.race === "elve"));
         break;
-        case "humans" :
+        case "human" :
           setCharactersCards(characters.filter( (character) => character.race === "human"));
         break;
-        case "orcs" :
+        case "orc" :
           setCharactersCards(characters.filter( (character) => character.race === "orc"));
+        break;
+        case "maiar" :
+          setCharactersCards(characters.filter( (character) => character.race === "maiar"));
         break;
         default : setCharactersCards();
     };
