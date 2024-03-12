@@ -1,220 +1,221 @@
-const teamName = document.getElementById("team");
-const typeOfSport = document.getElementById("sport");
-const worldCupYear = document.getElementById("year");
-const headCoach = document.getElementById("head-coach");
-const playerCards = document.getElementById("player-cards");
-const playersDropdownList = document.getElementById("players");
+const movieName = document.getElementById("movie");
+const typeOfMovie = document.getElementById("type");
+const yearProduction = document.getElementById("year");
+const directorMovie = document.getElementById("director");
+const charactersCards = document.getElementById("characters-cards");
+const charactersDropdownList = document.getElementById("characters");
 
-const myFavoriteFootballTeam = 
+const charactersMovie = 
 {
-    team : "Argentina",
-    sport: "Football",
-    year: 1986,
-    isWorldCupWinner: true,
-    headCoach : {
-        coachName : "Carlos Bilardo",
-        matches : 7,
+    movie : "Lord of the rings trilogy",
+    type: "Fantasy",
+    year: "2001/2002/2003",
+    isOscarsWinner: true,
+    director : {
+        directorName : "Peter Jackson",
+        movies : 3,
     },
-    players : [
+    characters : [
      {
-        name: "Sergio Almirón",
-        position: "forward",
-        number: 1,
-        isCaptain: false,
-        nickname: null,
+        name: "Aragorn",
+        race: "human",
+        isDead: false,
+        ring: "Barahir",
     },
     {
-        name: "Sergio Batista",
-        position: "midfielder",
-        number: 2,
-        isCaptain: false,
-        nickname: null,
+        name: "Frodo Baggins",
+        race: "hobbit",
+        isDead: false,
+        ring: "The One",
     },
     {
-     name: "Ricardo Bochini",
-     position: "midfielder",
-     number: 3,
-     isCaptain: false,
-     nickname: "El Bocha",
-   },
-   {
-     name: "Claudio Borghi",
-     position: "midfielder",
-     number: 4,
-     isCaptain: false,
-     nickname: "Bichi",
-   },
-   {
-     name: "José Luis Brown",
-     position: "defender",
-     number: 5,
-     isCaptain: false,
-     nickname: "Tata",
-   },
-   {
-     name: "Daniel Passarella",
-     position: "defender",
-     number: 6,
-     isCaptain: false,
-     nickname: "El Gran Capitán",
-   },
-   {
-     name: "Jorge Burruchaga",
-     position: "forward",
-     number: 7,
-     isCaptain: false,
-     nickname: "Burru",
-   },
-   {
-     name: "Néstor Clausen",
-     position: "defender",
-     number: 8,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "José Luis Cuciuffo",
-     position: "defender",
-     number: 9,
-     isCaptain: false,
-     nickname: "El Cuchu",
-   },
-   {
-     name: "Diego Maradona",
-     position: "midfielder",
-     number: 10,
-     isCaptain: true,
-     nickname: "El Pibe de Oro",
-   },
-   {
-     name: "Jorge Valdano",
-     position: "forward",
-     number: 11,
-     isCaptain: false,
-     nickname: "The Philosopher of Football",
-   },
-   {
-     name: "Héctor Enrique",
-     position: "midfielder",
-     number: 12,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "Oscar Garré",
-     position: "defender",
-     number: 13,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "Ricardo Giusti",
-     position: "midfielder",
-     number: 14,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "Luis Islas",
-     position: "goalkeeper",
-     number: 15,
-     isCaptain: false,
-     nickname: "El loco",
-   },
-   {
-     name: "Julio Olarticoechea",
-     position: "defender",
-     number: 16,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "Pedro Pasculli",
-     position: "forward",
-     number: 17,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "Nery Pumpido",
-     position: "goalkeeper",
-     number: 18,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "Oscar Ruggeri",
-     position: "defender",
-     number: 19,
-     isCaptain: false,
-     nickname: "El Cabezón",
-   },
-   {
-     name: "Carlos Tapia",
-     position: "midfielder",
-     number: 20,
-     isCaptain: false,
-     nickname: null,
-   },
-   {
-     name: "Marcelo Trobbiani",
-     position: "midfielder",
-     number: 21,
-     isCaptain: false,
-     nickname: "Calesita",
-   },
-   {
-     name: "Héctor Zelada",
-     position: "goalkeeper",
-     number: 22,
-     isCaptain: false,
-     nickname: null,
-   },
+      name: "Gandalf",
+      race: "maiar",
+      isDead: false,
+      ring: "Narya",
+    },
+    {
+      name: "Boromir",
+      race: "human",
+      isDead: true,
+      ring: null,
+    },
+    {
+      name: "Meriadoc Brandybuck",
+      race: "hobbit",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+     name: "Peregrin Took",
+      race: "hobbit",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Samwise Gamegee",
+      race: "hobbit",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Arwen",
+      race: "elve",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Legolas",
+      race: "elve",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Denethor",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Elrond",
+      race: "elve",
+      isDead: false,
+      ring: "Vilya",
+    },
+    {
+      name: "Eomer",
+      race: "human",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Eowyn",
+      race: "human",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Faramir",
+      race: "human",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Galadriel",
+      race: "elve",
+      isDead: false,
+      ring: "Nenya",
+    },
+    {
+      name: "Gimli",
+      race: "dwarf",
+      isDead: false,
+      ring: "N/A",
+    },
+    {
+      name: "Grima Wormtongue",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Gollum",
+      race: "hobbit",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Isildur",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Saruman",
+      race: "maiar",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Theoden",
+      race: "human",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Grishnákh",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Uglúk",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Gothmog",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
+    {
+      name: "Mog",
+      race: "orc",
+      isDead: true,
+      ring: "N/A",
+    },
 ],
 };
 
-Object.freeze(myFavoriteFootballTeam);
+Object.freeze(charactersMovie);
 
 /*const sport = myFavoriteFootballTeam.sport;
 const team = myFavoriteFootballTeam.team;*/
 // Refacto object destructuring syntax. Dans le principe, créer une variable pour chaque param
-const {sport, team, year, players} = myFavoriteFootballTeam;
-const {coachName} = myFavoriteFootballTeam.headCoach;
+const {type, movie, year, characters} = charactersMovie;
+const {directorName} = charactersMovie.director;
 
-typeOfSport.textContent = sport;
-teamName.textContent = team;
-worldCupYear.textContent = year;
-headCoach.textContent = coachName;
+typeOfMovie.textContent = type;
+movieName.textContent = movie;
+yearProduction.textContent = year;
+directorMovie.textContent = directorName;
 
-const setPlayerCards = (arr = players) =>{
-playerCards.innerHTML += arr.map(({name, position, number, isCaptain, nickname}) =>
-    `<div class="player-card">
-        <h2>${name} ${isCaptain ? "(Captain)" : ""}</h2>
-        <p>Position: ${position}</p>
-        <p>Number: ${number}</p>
-        <p>Nickname: ${nickname ? nickname : "N/A"}</p>
+const setCharactersCards = (arr = characters) =>{
+charactersCards.innerHTML += arr.map(({name, race, isDead, ring}) =>
+    `<div class="character-card">
+        <h2>${name} ${isDead ? "(Dead)" : ""}</h2>
+        <p>Race: ${race}</p>
+        <p>Ring: ${ring ? ring : "No ring"}</p>
     </div>`
 ).join("");
 };
 
-playersDropdownList.addEventListener("change", (e) =>{
-    playerCards.innerHTML = "";
+charactersDropdownList.addEventListener("change", (e) =>{
+    charactersCards.innerHTML = "";
     switch(e.target.value){
-        case "nickname" :
-            setPlayerCards(players.filter( (player) => player.nickname !== null));
+        case "dead" :
+          setCharactersCards(characters.filter( (character) => character.isDead !== false));
         break;
-        case "forward" :
-            setPlayerCards(players.filter( (player) => player.position === "forward"));
+        case "dwarf" :
+          setCharactersCards(characters.filter( (character) => character.race === "dwarf"));
         break;
-        case "midfielder" :
-            setPlayerCards(players.filter( (player) => player.position === "midfielder"));
+        case "hobbit" :
+          setCharactersCards(characters.filter( (character) => character.race === "hobbit"));
         break;
-        case "defender" :
-            setPlayerCards(players.filter( (player) => player.position === "defender"));
+        case "elve" :
+          setCharactersCards(characters.filter( (character) => character.race === "elve"));
         break;
-        case "goalkeeper" :
-            setPlayerCards(players.filter( (player) => player.position === "goalkeeper"));
+        case "human" :
+          setCharactersCards(characters.filter( (character) => character.race === "human"));
         break;
-        default : setPlayerCards();
+        case "orc" :
+          setCharactersCards(characters.filter( (character) => character.race === "orc"));
+        break;
+        case "maiar" :
+          setCharactersCards(characters.filter( (character) => character.race === "maiar"));
+        break;
+        default : setCharactersCards();
     };
 });
